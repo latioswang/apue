@@ -1,4 +1,4 @@
-TUPE
+APUE
 ====
+Advanced Programming in the Unix Environment exercises.
 
-The Unix Programming Environment by Brain exercises
