@@ -10,12 +10,12 @@ int main() {
 	if ((lockd=open("lock",O_CREAT|O_WRONLY|O_EXCL))==-1) {
 		perror("can not create 'lock' file");
 		exit(1);
-	} else {
-		if (unlink("lock")==-1) {
+	} else { //lock success
+		sleep(10);/* do sth useful*/
+		if (unlink("lock")==-1) { // remove lock upon exit
 			perror("can not unlink 'lock'");
 			exit(1);
 		}
 	}
-	sleep(10);
 	return 0;
 }
